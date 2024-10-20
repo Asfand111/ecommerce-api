@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .dark{
+            color: aliceblue;
+            background-color: black;
+        }
+        .light{
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+    </style>
+    <button class="btn">click me</button>
+    <div class="div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci libero amet quaerat sit, accusantium nemo labore doloremque quisquam in expedita nisi ullam earum.</p>
+    </div>
+    <script>
+        //inline event handling
+        //    btn.onclick =(evt)=>{
+            //     console.log(evt.target)
+            //    }
+            //event listeners
+            btn = document.querySelector(".btn")
+            div = document.querySelector(".div")
+            body = document.querySelector("body")
+            let mode = "light"
+
+        // practise questions
+            btn.addEventListener("ondblclick",()=>{
+                // console.log("duble clickd")
+                if(mode === "light"){
+                    mode ="dark"
+                    body.classList.add ("dark")
+                    body.classList.remove ("light")
+
+                }else{
+                    mode= "light"
+                    body.classList.add ("light")
+                    body.classList.remove ("dark")
+                }
+                // console.log(mode)
+            })
+
+            // btn.ondblclick = ()=>{
+            //     if(mode==="light"){
+            //         mode = "dark"
+            //         body.classList.add ("dark")
+            //         body.classList.remove ("light")
+            //     }else{
+            //         mode= "light"
+            //         body.classList.add ("light")
+            //         body.classList.remove ("dark")
+            //     }
+            // }
+
+    //    btn.addEventListener("click", () => {
+    //     console.log("legentds", )
+    //    });
+    //    const handle = () => {
+    //        div.innerText = "handle 2"
+        
+    //    };
+    //    btn.addEventListener("click", handle)
+
+    //    btn.addEventListener("click", () => {
+    //     console.log("legentds3")
+    //    });
+    //    btn.removeEventListener("click", handle)
+    //    btn.removeEventListener("click", handle)
+    </script>
+</body>
+</html>

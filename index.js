@@ -46,3 +46,6 @@ let categoryFilter = () => {
     displayProduct(checkData);
 }
 displayProduct();
+
+
+// dummy comment
